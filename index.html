@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ho Yik To</title>
+    <meta name="description" content="A description of your site">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body id="index">
+    <!-- Wrap the content to control the layout width and center it -->
+    <div class="container">
+        <header>
+            <!-- Your main logo -->
+            <h1><img src="hoyikto.png" alt="Ho Yik To"></h1>
+
+            <!-- Navigation Menu (Removed the width/height attributes) -->
+            <nav style="margin-top: 20px;">
+                <ul>
+                    <li><a href="about.html"><img src="about.png" alt="About"></a></li>
+                    <li><a href="works.html"><img src="works.png" alt="Works"></a></li>
+                    <li><a href="contact.html"><img src="contact.png" alt="Contact"></a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- The Hover Effect Script -->
+    <script>
+    $(function(){
+        // 1. Loop through every image in the navigation
+        $("nav ul li a img").each(function(){
+            var $item = $(this);
+            $item.addClass("not-active");
+    
+            // 2. Clone the image, rename it, and hide it using opacity
+            var $itemActive = $item.clone();
+            $itemActive.attr("src", $itemActive.attr("src").replace(".png", "_active.png"));
+            $itemActive.addClass("active");
+            
+            $item.before($itemActive);
+            $itemActive.css({ opacity: 0, display: 'block' }); // Hide via opacity instead of display:none
+        });
+
+        // 3. Hover effect using .fadeTo() and .stop()
+        $("nav ul li a").hover(function(){
+            $(this).children(".not-active").stop().fadeTo(150, 0);
+            $(this).children(".active").stop().fadeTo(150, 1);
+        }, function(){
+            $(this).children(".not-active").stop().fadeTo(150, 1);
+            $(this).children(".active").stop().fadeTo(150, 0);
+        });
+    });
+</script>
+</body>
+</html>
