@@ -1,0 +1,86 @@
+/* 
+*
+*   hoyikto.com
+*   page-index.css - Homepage specific styles
+*
+*/
+
+html, body {
+    width: 100vw;
+    height: 100dvh;
+}
+
+body {
+    /* Explicitly sets the font size back to your default preference */
+    font-size: 35px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left edge */
+    justify-content: center;
+    
+    padding: 0;
+    margin: 0 auto;
+    min-width: 0;
+    max-width: 800px; /* Constrains the width so it acts like a clean block */
+    text-align: left;
+}
+
+main {
+    padding-left: 0;
+    min-height: auto; 
+}
+
+header {
+    position: static;
+    width: 100%;
+    font-size: inherit;
+    line-height: 2em;
+    text-align: left;
+}
+
+/* Forces 'hoyikto' and the navigation links to share the exact same left alignment */
+header h1, 
+header nav {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* WEB LAYOUT: Horizontal Row */
+header li {
+    display: inline-block;
+    margin-right: 1.5em; /* Spacing between horizontal links */
+    margin-left: 0;
+}
+
+/* --------------------------------- */
+/* Responsive (Mobile View)          */
+/* --------------------------------- */
+@media screen and (max-width: 960px) {
+    body { 
+        font-size: 6vw; 
+        padding: 2rem;
+        box-sizing: border-box;
+        align-items: center; /* Center-aligns on smaller screens if desired */
+        text-align: center;
+    }
+    
+    header {
+        text-align: center;
+    }
+
+    header h1, 
+    header nav {
+        text-align: center;
+    }
+
+    /* MOBILE LAYOUT: Vertical Stack (List) */
+    header li {
+        display: block; /* Forces each link onto a new line */
+        margin-right: 0;
+        margin-bottom: 0.5em; /* Vertical spacing between links */
+    }
+    
+}
