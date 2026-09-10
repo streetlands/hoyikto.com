@@ -1,8 +1,6 @@
 /* 
-*
 *   hoyikto.com
 *   page-index.css - Homepage specific styles
-*
 */
 
 html, body {
@@ -11,48 +9,51 @@ html, body {
 }
 
 body {
-    /* Explicitly sets the font size back to your default preference */
+    /* Controls the massive homepage size */
     font-size: 35px;
-    
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns content to the left edge */
+    align-items: flex-start;
     justify-content: center;
-    
     padding: 0;
     margin: 0 auto;
     min-width: 0;
-    max-width: 800px; /* Constrains the width so it acts like a clean block */
+    max-width: 1100px; 
     text-align: left;
+}
+
+/* OVERRIDES: Reverts the global fixed vertical header back to horizontal */
+header {
+    position: static; 
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    
+    /* FIX: Forces the header to use the 35px body size instead of the 14px global size */
+    font-size: inherit; 
+    line-height: 2em;
+}
+
+header h1 {
+    margin-bottom: 0;
+    font-size: inherit;
+}
+
+header h1, 
+header nav {
+    width: 100%;
+    text-align: left;
+}
+
+header li {
+    display: inline-block; /* Aligns links horizontally */
+    margin-right: 1.5em; 
+    margin-bottom: 0;
 }
 
 main {
     padding-left: 0;
     min-height: auto; 
-}
-
-header {
-    position: static;
-    width: 100%;
-    font-size: inherit;
-    line-height: 2em;
-    text-align: left;
-}
-
-/* Forces 'hoyikto' and the navigation links to share the exact same left alignment */
-header h1, 
-header nav {
-    width: 100%;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-}
-
-/* WEB LAYOUT: Horizontal Row */
-header li {
-    display: inline-block;
-    margin-right: 1.5em; /* Spacing between horizontal links */
-    margin-left: 0;
 }
 
 /* --------------------------------- */
@@ -63,24 +64,23 @@ header li {
         font-size: 6vw; 
         padding: 2rem;
         box-sizing: border-box;
-        align-items: center; /* Center-aligns on smaller screens if desired */
-        text-align: center;
+        align-items: center; 
+        max-width: 100vw;
     }
     
     header {
-        text-align: center;
+        white-space: normal;
     }
 
+    header, 
     header h1, 
     header nav {
         text-align: center;
     }
-
-    /* MOBILE LAYOUT: Vertical Stack (List) */
-    header li {
-        display: block; /* Forces each link onto a new line */
-        margin-right: 0;
-        margin-bottom: 0.5em; /* Vertical spacing between links */
-    }
     
+    header li {
+        display: block; /* Stacks vertically on mobile screens */
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
 }

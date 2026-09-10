@@ -20,10 +20,7 @@
 html {
     width: 100%;
     height: 100%;
-    
-    /* Applies Helvetica with standard system fallbacks */
     font-family: "Times New Roman", Times, serif; 
-    
     font-size: 14px;
     font-weight: 400;
 }
@@ -34,10 +31,11 @@ body {
     max-width: 1400px;
     min-height: 100vh;
     margin: auto;
-    padding: 20px 6rem 6rem 6rem;
+    /* Added 250px right padding so text does not slide under the new fixed header */
+    padding: 20px 250px 6rem 6rem;
 }
 
-strong {
+strong, h1 {
     font-weight: normal;
 }
 
@@ -54,29 +52,37 @@ em {
 a, a:visited, a:active { 
     color: inherit; 
     word-break: break-all; 
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 /* ----------------------------------------- */
-/* Common Contents */
+/* Global Navigation (Right-Aligned) */
 /* ----------------------------------------- */
 header {
     position: fixed;
+    top: 4rem;
+    right: 4rem;
+    width: auto;
     font-size: 1rem;
-    line-height: 1.7em;
+    line-height: 1.5em;
+    text-align: right;
+    z-index: 1000;
 }
 
-main { 
-    padding-left: 300px; 
-    min-height: calc(90dvh - 1rem); 
+header h1, 
+header nav {
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
 
-main > h1 { 
-    font-size: 35px;
-    letter-spacing: 0.02em; 
-    line-height: 1.1em; 
-    height: fit-content;
-    min-height: 100px;
-    padding-bottom: 1rem;
+header h1 {
+    margin-bottom: 1.5em;
+}
+
+header li {
+    display: block; /* Stacks the links vertically */
+    margin: 0 0 0.5em 0;
 }
 
 /* HOYIKTO title interaction */
@@ -88,6 +94,31 @@ h1 > a {
 
 h1 > a:hover { 
     opacity: 1; 
+}
+
+/* Link Hover and Active State Highlight */
+a:hover, 
+a.active {
+    color: #900; /* Highlights active and hovered links in red */
+    opacity: 1;
+}
+
+/* ----------------------------------------- */
+/* Common Contents */
+/* ----------------------------------------- */
+main { 
+    /* Removed the 300px left offset so your content aligns normally */
+    padding-left: 0; 
+    min-height: calc(90dvh - 1rem); 
+}
+
+main > h1 { 
+    font-size: 35px;
+    letter-spacing: 0.02em; 
+    line-height: 1.1em; 
+    height: fit-content;
+    min-height: 100px;
+    padding-bottom: 1rem;
 }
 
 main > nav {
@@ -121,7 +152,7 @@ main > article a:hover {
 
 footer {
     width: 100%; 
-    padding-left: 300px; 
+    padding-left: 0; 
 }
 
 footer > small { 
@@ -130,16 +161,6 @@ footer > small {
     height: 1rem; 
     text-align: left; 
     font-size: 0.7rem; 
-}
-
-.main-menu a { 
-    transition: color 0.2s ease; 
-}
-
-.main-menu a:hover,
-.main-menu .current-menu-item a,
-.main-menu .current-page-ancestor a { 
-    color: #900; 
 }
 
 /* Common Responsive */
@@ -156,17 +177,25 @@ footer > small {
         max-width: inherit; 
         padding: 2rem 1rem; 
     }
-    header { display: none; }
+    
+    header { 
+        position: static; /* Un-fixes the header for mobile */
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    header h1, header nav { 
+        text-align: center; 
+    }
+    
     main { padding-left: 0; padding-right: 0; }
     main > h1 { font-size: 28px; min-width: inherit; }
     main > nav { height: 100px; }
     main > article { width: 100%; }
+    
     footer { padding-left: 0; }
     footer > small { width: 100%; padding-left: 0; }
+    
     .pc { display: none; }
     .mobile { display: inherit; }
-}
-
-h1 {
-    font-weight: normal;
 }

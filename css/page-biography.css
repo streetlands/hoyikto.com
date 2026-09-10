@@ -1,0 +1,75 @@
+/* 
+*   hoyikto.com
+*   page-biography.css 
+*/
+
+.bio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Aligns both columns to the top */
+    
+    /* Adjust these values to control how far from the left edge the block sits */
+    max-width: 1000px;
+    margin: 4rem auto; 
+    padding: 0 2rem;
+}
+
+/* The left-side year navigation */
+#bio-index {
+    width: 100px; 
+    flex-shrink: 0;
+    margin-right: 4rem; /* Spacing between the years and the bio text */
+}
+
+#bio-index li {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+/* The right-side text column */
+#bio-list {
+    flex-grow: 1;
+    max-width: 600px; /* Constrains the reading width */
+}
+
+/* Formatting the specific text elements inside the bio */
+#bio-list time {
+    display: block;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* Removes top margin from the very first year */
+#bio-list time:first-child {
+    margin-top: 0;
+}
+
+#bio-list h2 {
+    font-size: inherit;
+    margin-bottom: 0.2em;
+}
+
+#bio-list p {
+    margin-bottom: 1.5em;
+}
+
+/* --------------------------------- */
+/* Responsive (Mobile View)          */
+/* --------------------------------- */
+@media screen and (max-width: 960px) {
+    .bio-container {
+        flex-direction: column; /* Stacks the years above the text on mobile */
+        margin: 2rem auto;
+    }
+    
+    #bio-index {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    #bio-index li {
+        display: inline-block; /* Turns years into a horizontal row on mobile */
+        margin-right: 1em;
+    }
+}

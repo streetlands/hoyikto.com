@@ -1,0 +1,23 @@
+body.contact main h2 {
+    font-size: 24px; 
+    margin-top: 0; /* Removes hidden browser spacing */
+    margin-bottom: 0.5em; 
+    line-height: 1; /* Tightens the invisible box around the text */
+}
+
+/* Targets the email and Instagram links */
+body.contact main p {
+    font-size: 16px; /* Adjust this value for the links */
+    margin: 0.5em 0;
+}
+
+body.contact {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; /* Anchors the content to the top instead of the middle */
+    min-height: 100vh;
+    
+    /* 4rem top padding aligns exactly with the header's top spacing */
+    padding: 4rem 250px 0 0; 
+    margin: 0;
+}
