@@ -13,31 +13,157 @@
     <link href="css/page-index.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
+    <!-- Layout & Background Styles -->
+    <style>
+        html, body {
+            width: 100% !important;
+            min-height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden !important;
+            background-color: #000000;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('hoyikto.jpg'); 
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            opacity: 1;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Top Header Wrapper - shifted slightly up from before */
+        header {
+            position: fixed !important;
+            top: 0.5rem !important;          /* Shifted slightly up from 1.25rem */
+            left: 0 !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            padding: 2.5rem 3.5rem !important;
+            z-index: 9999 !important;
+            background: transparent !important;
+            display: block !important;
+        }
+
+        /* "hoyikto" title - forced solid pure white and opaque */
+        header h1 {
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 2.25rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.02em !important;
+            line-height: 1 !important;
+            white-space: nowrap !important;
+            float: none !important;
+            color: #ffffff !important;
+            opacity: 1 !important;
+            filter: none !important;
+            text-shadow: none !important;
+        }
+
+        header h1 a,
+        header h1 a:link,
+        header h1 a:visited,
+        header h1 a:hover,
+        header h1 a:active {
+            text-decoration: none !important;
+            color: #ffffff !important;
+            opacity: 1 !important;
+            filter: none !important;
+        }
+
+        /* Pinned Navigation: restored back to original vertical coordinate */
+        nav.main-menu {
+            position: fixed !important;
+            top: 3.1rem !important;         /* Restored to exact previous baseline */
+            right: 50px !important;         /* Adjust higher to move further left, lower for right */
+            left: auto !important;
+            bottom: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: auto !important;
+            float: none !important;
+            display: block !important;
+            z-index: 10000 !important;
+        }
+
+        /* Single-line link container */
+        ul.menu {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            gap: 1.5rem !important;
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            width: auto !important;
+            white-space: nowrap !important;
+        }
+
+        ul.menu li {
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            white-space: nowrap !important;
+        }
+
+        ul.menu li a,
+        ul.menu li a:link,
+        ul.menu li a:visited {
+            display: inline-block !important;
+            text-decoration: none !important;
+            color: #ffffff !important;
+            font-size: 1.15rem !important;
+            font-weight: 400 !important;
+            letter-spacing: 0.03em !important;
+            opacity: 0.9 !important;
+            white-space: nowrap !important;
+            transition: opacity 0.2s ease;
+        }
+
+        ul.menu li a:hover {
+            opacity: 0.5 !important;
+        }
+
+        /* Suppress main wrapper */
+        main {
+            display: none !important;
+        }
+    </style>
+
     <!-- Scripts -->
     <script src="js/script.js" defer></script>
 </head>
 
 <body class="home page">
     <header>
-    <!-- Points directly back to your homepage file -->
-    <h1><a href="index.html">hoyikto</a></h1>
-    <nav class="main-menu">
-        <ul class="menu">
-            <li><a href="works.html">Works</a></li>
-            <!-- Points directly to your biography file -->
-            <li><a href="biography.html">Biography</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>     
-</header>
+        <!-- Points directly back to your homepage file -->
+        <h1><a href="index.html">Ho Yikto</a></h1>
+        <nav class="main-menu">
+            <ul class="menu">
+                <li><a href="works.html">Works</a></li>
+                <!-- Points directly to your biography file -->
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>     
+    </header>
 
     <main>
-        <!-- Your primary content and imagery goes here -->
-        
-        <!-- Example native HTML5 dialog for modern, script-free image popups -->
         <dialog id="image-lightbox">
             <form method="dialog">
                 <button>Close</button>
