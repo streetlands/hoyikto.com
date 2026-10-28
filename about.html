@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ho Yikto</title>
+  <meta name="description" content="About Ho Yikto">
+  <meta property="og:title" content="About - Ho Yikto">
+  <meta name="og:description" content="About Ho Yikto">
+  <meta property="og:type" content="company">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="css/style.css">
+  <noscript data-n-css=""></noscript>
+</head>
+<body>
+  <div id="__next">
+    <div class="wrapper">
+      
+      <!-- Header -->
+      <header class="header">
+        <a class="header__logo" href="index.html">Ho Yikto</a>
+        <nav class="header__nav">
+          
+          <ul class="depth--1">
+            <!-- 1. Projects Dropdown Menu -->
+            <li class="depth--1 nav-dropdown">
+              <button class="inactive toggle-btn">Projects</button>
+              
+              <!-- First Level Submenu -->
+              <ul class="depth--2 submenu" style="display: none; padding-top: 6px;">
+                
+                <!-- Nested Second Level Dropdown -->
+                <li class="depth--2 nav-dropdown">
+                  <button class="inactive toggle-btn">Discography</button>
+                  <ul class="depth--3 submenu" style="display: none; padding-top: 6px; padding-bottom: 6px;">
+                    <li class="depth--3"><a class="depth--3 inactive" href="untitled.html">Untitled</a></li>
+                    <li class="depth--3"><a class="depth--3 inactive" href="#">Consectetur</a></li>
+                    <li class="depth--3"><a class="depth--3 inactive" href="#">Adipiscing</a></li>
+                  </ul>
+                </li>
+                
+                <!-- Regular Submenu Links -->
+                <li class="depth--2"><a class="depth--2 inactive" href="#">Exhibitions</a></li>
+                <li class="depth--2"><a class="depth--2 inactive" href="#">Eiusmod Tempor</a></li>
+              </ul>
+            </li>
+
+            <!-- 2. Other Main Links -->
+            <!-- 'active' class moved to About -->
+            <li class="depth--1"><a class="depth--1 active" href="about.html">About</a></li>
+            <li class="depth--1"><a class="depth--1 inactive" href="#">Contact</a></li>
+          </ul>
+
+          <nav class="header__lang">
+            <a class="active" href="/">EN</a>
+            <span class="nav__space">/</span>
+            <a class="inactive" href="/CN">中文</a>
+          </nav>
+        </nav>
+        <div class="header__button">Menu</div>
+        <div class="header__back"></div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main" style="opacity: 1; transform: none;">
+        
+        <div class="module module__title">
+          <h2><b>Ho Yikto </b></h2>
+        </div>
+
+         <div class="module rte module__richtext">
+          <div class="module__richtext__rte rte serif">
+            <hr>
+          </div>
+        </div>
+        
+        <div class="module rte module__richtext">
+          <div class="module__richtext__rte rte serif">
+            <p>Born in 2002. <br>
+             B.M. from Berklee College of Music in Scoring for Media.<br>
+            Lives and works in Hong Kong.</p>
+            <h3>Contact: <a href="mailto:contact@hoyikto.com">info@hoyikto.com</a></h3>
+          </div>
+        </div>
+        
+       
+        
+      </main>
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Lorem Ipsum Dolor<br>Sit Amet 43<br>© Ho Yikto All Rights Reserved.</p>
+      </footer>
+      
+    </div>
+  </div>
+
+  <!-- Replacement Scripts for Functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      // 1. Mobile Menu Toggle
+      const menuButton = document.querySelector('.header__button');
+      const header = document.querySelector('.header');
+      const nav = document.querySelector('.header__nav');
+      
+      if(menuButton && nav) {
+        menuButton.addEventListener('click', () => {
+          nav.classList.toggle('active');
+          header.classList.toggle('menu-open');
+          
+          if (nav.classList.contains('active')) {
+            nav.style.display = 'block';
+            menuButton.textContent = 'Close';
+          } else {
+            nav.style.display = '';
+            menuButton.textContent = 'Menu';
+          }
+        });
+      }
+
+      // 2. Dropdown / Nested Menu Toggle Logic
+      const toggleButtons = document.querySelectorAll('.toggle-btn');
+      
+      toggleButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault(); 
+          
+          const submenu = btn.nextElementSibling;
+          
+          if (submenu && submenu.classList.contains('submenu')) {
+            if (submenu.style.display === 'none' || submenu.style.display === '') {
+              submenu.style.display = 'block';
+              btn.classList.remove('inactive'); 
+            } else {
+              submenu.style.display = 'none';
+              btn.classList.add('inactive');
+            }
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

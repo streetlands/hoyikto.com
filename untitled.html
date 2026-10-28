@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ho Yikto</title>
+  <meta name="description" content="Lorem ipsum dolor sit amet">
+  <meta property="og:title" content="Untitled - Ho Yikto">
+  <meta name="og:description" content="Lorem ipsum dolor sit amet">
+  <meta property="og:type" content="company">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="css/style.css">
+  <noscript data-n-css=""></noscript>
+</head>
+<body>
+  <div id="__next">
+    <div class="wrapper">
+      
+      <!-- Header -->
+      <header class="header">
+        <!-- Changed link to index.html -->
+        <a class="header__logo" href="index.html">Ho Yikto</a>
+        <nav class="header__nav">
+          
+          <ul class="depth--1">
+            <!-- 1. Projects Dropdown Menu (Opened) -->
+            <li class="depth--1 nav-dropdown">
+              <button class="toggle-btn">Projects</button>
+              
+              <!-- First Level Submenu (Changed display to 'block') -->
+              <ul class="depth--2 submenu" style="display: block; padding-top: 6px;">
+                
+                <!-- Nested Second Level Dropdown (Opened) -->
+                <li class="depth--2 nav-dropdown">
+                  <button class="toggle-btn">Discography</button>
+                  
+                  <!-- Second Level Submenu (Changed display to 'block') -->
+                  <ul class="depth--3 submenu" style="display: block; padding-top: 6px; padding-bottom: 6px;">
+                    <!-- 'active' class denotes current page -->
+                    <li class="depth--3"><a class="depth--3 active" href="untitled.html">Untitled</a></li>
+                    <li class="depth--3"><a class="depth--3 inactive" href="#">Consectetur</a></li>
+                    <li class="depth--3"><a class="depth--3 inactive" href="#">Adipiscing</a></li>
+                  </ul>
+                </li>
+                
+                <!-- Regular Submenu Links -->
+                <li class="depth--2"><a class="depth--2 inactive" href="#">Exhibitions</a></li>
+                <li class="depth--2"><a class="depth--2 inactive" href="#">Eiusmod Tempor</a></li>
+              </ul>
+            </li>
+
+            <!-- 2. Other Main Links -->
+            <li class="depth--1"><a class="depth--1 inactive" href="#">About</a></li>
+            <li class="depth--1"><a class="depth--1 inactive" href="#">Contact</a></li>
+          </ul>
+
+          <nav class="header__lang">
+            <a class="active" href="/">EN</a>
+            <span class="nav__space">/</span>
+            <a class="inactive" href="/CN">中文</a>
+          </nav>
+        </nav>
+        <div class="header__button">Menu</div>
+        <div class="header__back"></div>
+      </header>
+
+      <!-- Main Content (New Page Layout) -->
+      <main class="main" style="opacity: 1; transform: none;">
+        
+        <!-- YouTube Video 1 -->
+        <div class="module module__video">
+          <iframe width="100%" height="450" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <!-- YouTube Video 2 -->
+        <div class="module module__video">
+          <iframe width="100%" height="450" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <!-- YouTube Video 3 -->
+        <div class="module module__video">
+          <iframe width="100%" height="450" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+       
+        <!-- Large Title Block 1 -->
+        <div class="module module__title">
+          <h1>Untitled<br>26 April 2026</h1>
+        </div>
+        
+        <!-- Text Block 2 -->
+        <div class="module rte module__richtext">
+          <div class="module__richtext__rte rte">
+            <p><i>Untitled</i> is a project recorded at Futura Productions at 4 Belgrade Ave, Roslindale, Massachusetts. </p>
+            <p><i>I am grateful to Aidan Kane, Jackson Kruger and Logan Burrell for agreeing to participate in this project. I would also like to extend my gratitude to John Weston for letting us record this project as his beautiful studio.
+          </div>
+        </div>
+        
+        <!-- Large Image 2 (Landscape) -->
+        <figure class="module module__image large">
+          <div class="imageStoryblok__wrapper" style="padding-bottom: 66.66%; position:relative;">
+            <img Untitled1.jpg" width="3720" height="2480" alt="Untitled Image 1" class="lazyautosizes lazyloaded" style="object-fit: cover; position: absolute; height: 100%; width: 100%;" sizes="773px" src="Untitled1.jpg">
+          </div>
+        </figure>
+        
+        <!-- Subtitle for Press -->
+        <div class="module module__title">
+          <h2>Credits</h2>
+        </div>
+        
+        <!-- Press List -->
+        <div class="module rte module__richtext">
+          <div class="module__richtext__rte rte serif">
+            <ul>
+              <li><p>Ho Yikto, Vocals, Songwriting</p></li>
+              <li><p>Aidan Kane, Drums</p></li>
+              <li><p>Jackson Kruger, Bass</p></li>
+              <li><p>Logan Burrell, Guitar</p></li>
+              <li><p>John Weston, Engineer</p></li>
+            </ul>
+          </div>
+        </div>
+        
+      </main>
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Lorem Ipsum Dolor<br>Sit Amet 43<br>© Ho Yikto All Rights Reserved.</p>
+      </footer>
+      
+    </div>
+  </div>
+
+  <!-- Replacement Scripts for Functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      // 1. Mobile Menu Toggle
+      const menuButton = document.querySelector('.header__button');
+      const header = document.querySelector('.header');
+      const nav = document.querySelector('.header__nav');
+      
+      if(menuButton && nav) {
+        menuButton.addEventListener('click', () => {
+          nav.classList.toggle('active');
+          header.classList.toggle('menu-open');
+          
+          if (nav.classList.contains('active')) {
+            nav.style.display = 'block';
+            menuButton.textContent = 'Close';
+          } else {
+            nav.style.display = '';
+            menuButton.textContent = 'Menu';
+          }
+        });
+      }
+
+      // 2. Dropdown / Nested Menu Toggle Logic
+      const toggleButtons = document.querySelectorAll('.toggle-btn');
+      
+      toggleButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault(); 
+          
+          const submenu = btn.nextElementSibling;
+          
+          if (submenu && submenu.classList.contains('submenu')) {
+            if (submenu.style.display === 'none' || submenu.style.display === '') {
+              submenu.style.display = 'block';
+              btn.classList.remove('inactive'); 
+            } else {
+              submenu.style.display = 'none';
+              btn.classList.add('inactive');
+            }
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

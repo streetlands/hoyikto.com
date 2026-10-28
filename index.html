@@ -1,175 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/favicon.ico">
-    
-    <title>hoyikto</title>
-    <meta name="robots" content="max-image-preview:large">
-    
-    <!-- Core Styles -->
-    <link href="css/common.css" rel="stylesheet" type="text/css">
-    <link href="css/page-index.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-
-    <!-- Layout & Background Styles -->
-    <style>
-        html, body {
-            width: 100% !important;
-            min-height: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            overflow-x: hidden !important;
-            background-color: #000000;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: url('hoyikto.jpg'); 
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            opacity: 1;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Top Header Wrapper - shifted slightly up from before */
-        header {
-            position: fixed !important;
-            top: 0.5rem !important;          /* Shifted slightly up from 1.25rem */
-            left: 0 !important;
-            width: 100% !important;
-            box-sizing: border-box !important;
-            padding: 2.5rem 3.5rem !important;
-            z-index: 9999 !important;
-            background: transparent !important;
-            display: block !important;
-        }
-
-        /* "hoyikto" title - forced solid pure white and opaque */
-        header h1 {
-            display: inline-block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            font-size: 2.25rem !important;
-            font-weight: 500 !important;
-            letter-spacing: 0.02em !important;
-            line-height: 1 !important;
-            white-space: nowrap !important;
-            float: none !important;
-            color: #ffffff !important;
-            opacity: 1 !important;
-            filter: none !important;
-            text-shadow: none !important;
-        }
-
-        header h1 a,
-        header h1 a:link,
-        header h1 a:visited,
-        header h1 a:hover,
-        header h1 a:active {
-            text-decoration: none !important;
-            color: #ffffff !important;
-            opacity: 1 !important;
-            filter: none !important;
-        }
-
-        /* Pinned Navigation: restored back to original vertical coordinate */
-        nav.main-menu {
-            position: fixed !important;
-            top: 3.1rem !important;         /* Restored to exact previous baseline */
-            right: 50px !important;         /* Adjust higher to move further left, lower for right */
-            left: auto !important;
-            bottom: auto !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            width: auto !important;
-            float: none !important;
-            display: block !important;
-            z-index: 10000 !important;
-        }
-
-        /* Single-line link container */
-        ul.menu {
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: nowrap !important;
-            align-items: center !important;
-            gap: 1.5rem !important;
-            list-style: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            width: auto !important;
-            white-space: nowrap !important;
-        }
-
-        ul.menu li {
-            display: inline-block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            list-style: none !important;
-            white-space: nowrap !important;
-        }
-
-        ul.menu li a,
-        ul.menu li a:link,
-        ul.menu li a:visited {
-            display: inline-block !important;
-            text-decoration: none !important;
-            color: #ffffff !important;
-            font-size: 1.15rem !important;
-            font-weight: 400 !important;
-            letter-spacing: 0.03em !important;
-            opacity: 0.9 !important;
-            white-space: nowrap !important;
-            transition: opacity 0.2s ease;
-        }
-
-        ul.menu li a:hover {
-            opacity: 0.5 !important;
-        }
-
-        /* Suppress main wrapper */
-        main {
-            display: none !important;
-        }
-    </style>
-
-    <!-- Scripts -->
-    <script src="js/script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ho Yikto</title>
+  <meta name="description" content="Lorem ipsum dolor sit amet">
+  <meta property="og:title" content="Ho Yikto">
+  <meta name="og:description" content="Lorem ipsum dolor sit amet">
+  <meta property="og:type" content="company">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="css/style.css">
+  <noscript data-n-css=""></noscript>
+  
+  <!-- Storyblok Bridge -->
+  <script async="" src="https://app.storyblok.com/f/storyblok-v2-latest.js" id="storyblok-javascript-bridge"></script>
 </head>
+<body>
+  <div id="__next">
+    <div class="wrapper">
+      
+      <!-- Header -->
+      <header class="header">
+        <a class="header__logo" href="index.html">Ho Yikto</a>
+        <nav class="header__nav">
+          
+          <ul class="depth--1">
+            <!-- 1. Projects Dropdown Menu -->
+            <li class="depth--1 nav-dropdown">
+              <button class="inactive toggle-btn">Projects</button>
+              
+              <!-- First Level Submenu -->
+              <ul class="depth--2 submenu" style="display: none; padding-top: 6px;">
+                
+                <!-- Nested Second Level Dropdown -->
+                <li class="depth--2 nav-dropdown">
+                  <button class="inactive toggle-btn">Discography</button>
+                  <ul class="depth--3 submenu" style="display: none; padding-top: 6px; padding-bottom: 6px;">
+                    <!-- UPDATED LINK HERE -->
+                    <li class="depth--3"><a class="depth--3 inactive" href="untitled.html">Untitled</a></li>
+                    <li class="depth--3"><a class="depth--3 inactive" href="#">Consectetur</a></li>
+                    <li class="depth--3"><a class="depth--3 inactive" href="#">Adipiscing</a></li>
+                  </ul>
+                </li>
+                
+                <!-- Regular Submenu Links -->
+                <li class="depth--2"><a class="depth--2 inactive" href="#">Exhibitions</a></li>
+                <li class="depth--2"><a class="depth--2 inactive" href="#">Eiusmod Tempor</a></li>
+              </ul>
+            </li>
 
-<body class="home page">
-    <header>
-        <!-- Points directly back to your homepage file -->
-        <h1><a href="index.html">Ho Yikto</a></h1>
-        <nav class="main-menu">
-            <ul class="menu">
-                <li><a href="works.html">Works</a></li>
-                <!-- Points directly to your biography file -->
-                <li><a href="biography.html">Biography</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>     
-    </header>
+            <!-- 2. Other Main Links -->
+            <!-- UPDATED LINK HERE -->
+            <li class="depth--1"><a class="depth--1 inactive" href="about.html">About</a></li>
+            <li class="depth--1"><a class="depth--1 inactive" href="#">Contact</a></li>
+          </ul>
 
-    <main>
-        <dialog id="image-lightbox">
-            <form method="dialog">
-                <button>Close</button>
-            </form>
-            <img src="" alt="Expanded portfolio view">
-        </dialog>
-    </main>
+          <nav class="header__lang">
+            <a class="active" href="/">EN</a>
+            <span class="nav__space">/</span>
+            <a class="inactive" href="/CN">中文</a>
+          </nav>
+        </nav>
+        <div class="header__button">Menu</div>
+        <div class="header__back"></div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main" style="opacity: 1; transform: none;">
+        
+        <div class="module module__title">
+          <p>Lorem ipsum dolor</p>
+        </div>
+        
+        <div class="module rte module__richtext">
+          <div class="module__richtext__rte rte serif">
+            <h3>Lorem Ipsum<br><i>Dolor sit amet</i><br><br>00 Fictional–00 Month 0000<br><br>Consectetur Adipiscing<br>Elit Sed Do 00<br>00000 Tempor<br><br><a href="#" target="_self">aliqua enim ad</a></h3>
+          </div>
+        </div>
+        
+        <!-- Image 1 -->
+        <figure class="module module__image regular">
+          <div class="imageStoryblok__wrapper" style="padding-bottom:75%; position:relative;">
+            <img data-sizes="auto" data-src="https://via.placeholder.com/4000x3000" width="4000" height="3000" alt="Placeholder Image 1" class="lazyautosizes lazyloaded" style="object-fit:cover;position:absolute;height:100%;width:100%;" sizes="773px" src="https://via.placeholder.com/4000x3000">
+          </div>
+        </figure>
+        
+        <div class="module rte module__richtext">
+          <div class="module__richtext__rte rte serif">
+            <h2>lorem ipsum<br><i>dolor / sit amet</i><br><br>Ut enim ad minim veniam<br>Quis Nostrud, Exercitation Ullamco<br>Laboris: Nisi Ut Aliquip<br>Ex Ea: Commodo Consequat<br>Duis Aute: Irure Dolor <br><br>Lorem, 00 Ipsum 0000, 0–00 am<br>(In reprehenderit in voluptate velit)<br><br>Esse Cillum Dolore Eu<br>Fugiat Nulla 00<br>00000 Pariatur<br><br><a href="#" target="_self">excepteur sint</a></h2>
+          </div>
+        </div>
+        
+        <!-- Image 2 -->
+        <figure class="module module__image regular">
+          <div class="imageStoryblok__wrapper" style="padding-bottom:67.04%; position:relative;">
+            <img data-sizes="auto" data-src="https://via.placeholder.com/3614x2423" width="3614" height="2423" alt="Placeholder Image 2" class="lazyautosizes lazyloaded" style="object-fit:cover;position:absolute;height:100%;width:100%;" sizes="773px" src="https://via.placeholder.com/3614x2423">
+          </div>
+        </figure>
+        
+        <div class="module rte module__richtext">
+          <div class="module__richtext__rte rte serif">
+            <h2>Lorem Ipsum Dolor Sit Amet (Jan–Jun 0000)<br>Consectetur Adipiscing</h2>
+          </div>
+        </div>
+        
+      </main>
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Lorem Ipsum Dolor<br>Sit Amet 43<br>© Ho Yikto All Rights Reserved.</p>
+      </footer>
+      
+    </div>
+  </div>
+
+  <!-- Replacement Scripts for Functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      // 1. Mobile Menu Toggle
+      const menuButton = document.querySelector('.header__button');
+      const header = document.querySelector('.header');
+      const nav = document.querySelector('.header__nav');
+      
+      if(menuButton && nav) {
+        menuButton.addEventListener('click', () => {
+          nav.classList.toggle('active');
+          header.classList.toggle('menu-open');
+          
+          if (nav.classList.contains('active')) {
+            nav.style.display = 'block';
+            menuButton.textContent = 'Close';
+          } else {
+            nav.style.display = '';
+            menuButton.textContent = 'Menu';
+          }
+        });
+      }
+
+      // 2. Dropdown / Nested Menu Toggle Logic
+      const toggleButtons = document.querySelectorAll('.toggle-btn');
+      
+      toggleButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault(); // Prevents page jump
+          
+          // Select the submenu immediately following the clicked button
+          const submenu = btn.nextElementSibling;
+          
+          if (submenu && submenu.classList.contains('submenu')) {
+            // Toggle visibility
+            if (submenu.style.display === 'none' || submenu.style.display === '') {
+              submenu.style.display = 'block';
+              btn.classList.remove('inactive'); 
+            } else {
+              submenu.style.display = 'none';
+              btn.classList.add('inactive');
+            }
+          }
+        });
+      });
+
+    });
+  </script>
 </body>
 </html>
